@@ -3,5 +3,5 @@ import { checkForName } from './js/nameChecker'
 import img from './file.png';
 
 console.log(checkForName);
-alert('I exist a bb');
+alert('I exist a bb cc');
 console.log("CHANGE!!");
