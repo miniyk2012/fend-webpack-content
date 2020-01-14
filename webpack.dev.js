@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 
 module.exports = {
     mode: 'development',
@@ -29,6 +31,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html", //模板路径
             filename: "./index.html", // //通过模板生成的文件名
-        })
+        }),
+        
     ]
 }
