@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    mode: 'development',
+    devtool: 'source-map',
     entry: './src/client/index.js', // 指要webpack打包的入口文件
     module: {
         rules: [ //  配置loader
