@@ -1,0 +1,1 @@
+module.exports = "Common";   // 导出一个字符串 

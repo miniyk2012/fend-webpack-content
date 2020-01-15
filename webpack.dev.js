@@ -2,11 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
+    // stats: 'verbose',
     entry: './src/client/index.js', // 指要webpack打包的入口文件
     module: {
         rules: [ //  配置loader
@@ -40,6 +41,7 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        })
+        }),
+        new BundleAnalyzerPlugin(),
     ]
 }
